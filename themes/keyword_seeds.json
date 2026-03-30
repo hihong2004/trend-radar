@@ -1,0 +1,129 @@
+{
+  "AI_Infrastructure": [
+    "AI chips",
+    "GPU shortage",
+    "HBM memory",
+    "AI data center",
+    "liquid cooling server",
+    "AI ASIC",
+    "AI inference chip",
+    "AI server demand"
+  ],
+  "Semiconductors": [
+    "semiconductor shortage",
+    "EUV lithography",
+    "chiplet packaging",
+    "advanced packaging semiconductor",
+    "TSMC capacity expansion",
+    "semiconductor equipment",
+    "chip export controls"
+  ],
+  "Optical_Communication": [
+    "silicon photonics",
+    "800G transceiver",
+    "optical interconnect",
+    "co-packaged optics",
+    "fiber optic AI",
+    "coherent optics"
+  ],
+  "Energy_Grid": [
+    "power transformer shortage",
+    "grid infrastructure spending",
+    "nuclear power AI data center",
+    "small modular reactor",
+    "electricity demand AI",
+    "natural gas power plant",
+    "grid modernization"
+  ],
+  "Biotech_Pharma": [
+    "GLP-1 drug",
+    "obesity drug stock",
+    "CRISPR therapy approval",
+    "CAR-T cell therapy",
+    "Alzheimer drug breakthrough",
+    "gene therapy FDA",
+    "ADC drug cancer"
+  ],
+  "Quantum_Computing": [
+    "quantum computing breakthrough",
+    "quantum chip",
+    "quantum error correction",
+    "quantum computing stock"
+  ],
+  "Robotics_Automation": [
+    "humanoid robot company",
+    "warehouse automation robot",
+    "industrial automation AI",
+    "autonomous vehicle 2026",
+    "robot as a service"
+  ],
+  "Cybersecurity": [
+    "zero trust security",
+    "AI cybersecurity",
+    "ransomware protection enterprise",
+    "cloud security spending",
+    "SASE cybersecurity"
+  ],
+  "Space_Defense": [
+    "satellite internet stock",
+    "space economy investment",
+    "commercial space launch",
+    "defense spending increase",
+    "hypersonic missile defense"
+  ],
+  "Fintech_Crypto": [
+    "Bitcoin ETF inflow",
+    "digital payment growth",
+    "blockchain enterprise",
+    "stablecoin regulation",
+    "BNPL growth 2026"
+  ],
+  "Cloud_SaaS": [
+    "cloud infrastructure spending",
+    "AI SaaS company",
+    "edge computing growth",
+    "cloud repatriation",
+    "vertical SaaS"
+  ],
+  "EV_Battery": [
+    "solid state battery",
+    "EV charging infrastructure",
+    "lithium supply shortage",
+    "sodium ion battery",
+    "EV sales growth"
+  ],
+  "Clean_Energy": [
+    "solar panel demand",
+    "offshore wind farm",
+    "green hydrogen",
+    "energy storage battery",
+    "carbon capture stock"
+  ],
+  "Real_Estate": [
+    "data center REIT",
+    "housing shortage USA",
+    "commercial real estate recovery",
+    "industrial warehouse demand"
+  ],
+  "Healthcare_Tech": [
+    "AI medical diagnosis",
+    "telehealth growth",
+    "surgical robot stock",
+    "digital health wearable",
+    "health data analytics"
+  ],
+  "Commodity_Resources": [
+    "copper demand AI",
+    "uranium price",
+    "rare earth supply chain",
+    "gold price record",
+    "oil demand peak"
+  ],
+  "Consumer_Trends": [
+    "luxury brand growth",
+    "streaming subscriber growth",
+    "social commerce",
+    "weight loss market",
+    "sports betting revenue"
+  ]
+}

@@ -1,0 +1,58 @@
+# .github/workflows/weekly_themes.yml
+# 每週日 UTC 12:00 自動掃描 Google Trends + Claude API 映射
+
+name: Weekly Theme Scan
+
+on:
+  schedule:
+    - cron: "0 12 * * 0"  # 每週日 UTC 12:00
+
+  workflow_dispatch:  # 允許手動觸發
+
+jobs:
+  theme-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore theme cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            themes/theme_cache.json
+            themes/theme_groups.json
+            cache/trends_scan_results.json
+          key: theme-cache-${{ github.run_number }}
+          restore-keys: |
+            theme-cache-
+
+      - name: Run weekly theme scan
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python weekly_themes.py --notify
+
+      - name: Commit updated theme files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add themes/theme_groups.json themes/theme_cache.json || true
+          git diff --staged --quiet || git commit -m "Auto-update theme groups [skip ci]"
+          git push || true
+
+      - name: Report status
+        if: failure()
+        run: echo "::error::Weekly theme scan failed."
